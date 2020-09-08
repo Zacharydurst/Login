@@ -1,21 +1,9 @@
 # Imports
 import tkinter as tk
-from tkinter import ttk
 from tkinter import messagebox
 import pyodbc
 import hashlib
 import os
-
-# Connection to SQL DB.
-mydb = pyodbc.connect(
-    'Driver={SQL Server};'
-    'Server=XPTA500272-P50;'
-    'Database=Mydb;'
-    'Trust_Connection=yes;'
-)
-
-# Creation of cursor for SQL Db session.
-mycursor = mydb.cursor()
 
 # Wrapper function and size of window.
 register = tk.Tk()
@@ -67,14 +55,20 @@ register_button = tk.Button(register, text = 'Register User', command = insert_i
 register_button.pack()
 
 
-# Infinite loop for the window to display.
-register.mainloop()
+# Main function to kick off script.
+def main():
+    # Connection to SQL DB.
+    mydb = pyodbc.connect(
+    'Driver={SQL Server};'
+    'Server=XPTA500272-P50;'
+    'Database=Mydb;'
+    'Trust_Connection=yes;')
 
+    # Creation of cursor for SQL DB session.
+    mycursor = mydb.cursor()
 
+    # Infinite loop for the window to display.
+    register.mainloop()
 
-
-
-
-
-
-
+if __name__ == "__main__":
+    main()
