@@ -1,3 +1,9 @@
+I created this project as a way to get experience using python to write data to a SQL database. The GUI is used as a simple way to gather user data. Sensitive password data is hashed and stored with a salt so no passwords are stored in plain sight. 
+
+
+
+
+
 # Instructions to run login.py are as follows:
 1. If you don't already have SQL Server you can download it here: https://go.microsoft.com/fwlink/?linkid=866662
 
