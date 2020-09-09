@@ -5,7 +5,8 @@
 
 3. The connection info in the main for both login.py and register.py need to be changed:
    The server needs to be changed to the name of your computer.
-  ```mydb = pyodbc.connect(
+  ```
+     mydb = pyodbc.connect(
     'Driver={SQL Server};'
     'Server=NAME_OF_YOUR_COMPUTER_HERE;'
     'Database=Mydb;'
